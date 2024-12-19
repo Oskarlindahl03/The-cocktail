@@ -1,0 +1,297 @@
+/*css reset*/
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  height: 100vh;
+  width: 100%;
+  background-color: green;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 7. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+.navbar {
+  display: flex;
+  background-color: #5c4033;
+  height: 10%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+}
+.item-container {
+  display: flex;
+  gap: 40px;
+  list-style-type: none;
+}
+.item {
+  font-weight: 600;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.item:hover {
+  text-decoration: underline;
+}
+.btn {
+  cursor: pointer;
+}
+#home-page,
+#details-page,
+#search-page,
+#liked-drinks-page {
+  display: none;
+}
+
+#home-page.open,
+#details-page.open,
+#search-page.open,
+#liked-drinks-page.open{
+  display: flex;
+}
+
+#home-page{
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin:20px;
+}
+.drink-image{
+  max-width: 300px;
+  border-radius: 10px;
+}
+.buttons-homepage{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+#search-page{
+  align-items: center;
+  justify-content: center;
+  height: 80%;
+}
+span{
+  display: flex;
+  
+}
+#details-page {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  background-color: green;
+  height: 200%;
+}
+.name-el {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #5c4033;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.category-el, 
+.alcoholic-el, 
+.glass-el, 
+.instructions-el {
+  font-size: 1.2rem;
+  color: #333;
+  text-align: center;
+  margin: 10px 0;
+  max-width: 400px;
+}
+
+.ingredients-el {
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+  font-size: 1.1rem;
+  text-align: center;
+  color: #555;
+}
+
+.ingredients-el li {
+  background-color: #ececec;
+  padding: 8px;
+  border-radius: 5px;
+  margin: 4px 0;
+}
+
+.thumbnail-el {
+  max-width: 300px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+#details-page button {
+  padding: 10px 20px;
+  margin: 20px 0;
+  background-color: #5c4033;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+#details-page button:hover {
+  background-color: #8b5e44;
+}
+#search-page {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  padding-top: 20px; 
+}
+
+#search-input {
+  width: 60%; 
+  padding: 10px;
+  margin-bottom: 20px; 
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+#search-input.invalid{
+  border: 5px solid red;
+  outline: none;
+}
+
+.search-results {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.thumbnail-el {
+  max-width: 200px;
+  border-radius: 10px;
+}
+
+.name-el {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+.content-container{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.like-icon {
+  font-size: 32px;  
+  color: black;   
+  cursor: pointer;  
+  transition:transform 0.3s;
+}
+
+.like-icon:hover {   
+  transform: scale(1.2); 
+}
+
+.like-icon:active {
+  color: #FF4500;  
+  transform: scale(1); 
+  fill: #FF4500;
+}
+.thumbnail-el{
+  transition: transform 0.3s;
+}
+.thumbnail-el:hover{
+  transform: scale(0.95);
+}
+#liked-drinks-page{
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.liked-drink{
+  display: flex;
+  flex-direction: column-reverse;
+}
+.delete-btn{
+  display: flex;
+  width: 80px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+.delete-btn:hover{
+  background-color: #DC143C;
+}
+form{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

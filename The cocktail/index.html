@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=thumb_up"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <img src="/imgs/logo.png" alt="logo" class="logo-image" />
+      <ul class="item-container">
+        <li class="item" id="home-link">generate-drink</li>
+        <li class="item" id="search-link">Search</li>
+        <li class="item" id="favorites-link">Liked drinks</li>
+      </ul>
+    </nav>
+
+    <section id="home-page" class="homepage-container" class="open">
+      <div class="drink-container">
+        <img class="drink-image" src="" alt="Random drink image" />
+        <h2 class="drink-name"></h2>
+      </div>
+      <div class="buttons-homepage">
+        <button class="generate-drink">Generate a new drink</button>
+        <button id="details-link">See more!</button>
+      </div>
+    </section>
+
+    <section id="search-page">
+      <form action="#" class="input-form">
+                <input
+          type="search"
+          name="serachDrink"
+          id="search-input"
+          placeholder="search for a drink"
+          required
+        />
+      </form>
+
+
+      <div class="search-buttons">
+        <button id="search-by-name">Search by Name</button>
+        <button id="search-by-ingredient">Search by Ingredient</button>
+        <button id="search-by-glass">Search by Glass</button>
+        <button id="search-by-category">Search by Category</button>
+      </div>
+      <div class="content-container"></div>
+    </section>
+
+    <section id="details-page"></section>
+
+    <section id="liked-drinks-page"></section>
+
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
